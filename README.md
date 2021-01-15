@@ -1,7 +1,6 @@
 # python-course
 
-
-'''
+```
 …or create a new repository on the command line
 
 echo "# python-course" >> README.md
@@ -26,4 +25,4 @@ git remote add origin https://github.com/erniespawn/python-course.git
 git branch -M main
 
 git push -u origin main
-'''
+```
