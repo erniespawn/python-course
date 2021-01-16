@@ -33,11 +33,13 @@ class Deck(object):
 
 	def shuffle(self):
 			for i in range(len(self.cards)-1, 0, -1):
-				print i
-	
+				r = random.randint(0,i)
+				self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
+
+
 class Player(object):
 	pass
-
+ 
 
 
 
@@ -47,3 +49,4 @@ card.show()
 deck = Deck()
 deck.show()
 deck.shuffle()
+deck.show()
