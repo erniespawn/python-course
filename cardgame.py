@@ -1,6 +1,7 @@
 import random
 
 print "Nice card game to learn Class"
+print "------------------------------"
 
 
 
@@ -36,17 +37,40 @@ class Deck(object):
 				r = random.randint(0,i)
 				self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
 
+	def drawCard(self):
+		return self.cards.pop()
+
 
 class Player(object):
-	pass
- 
+	def __init__(self, name):
+		self.name = name
+		self.hand = []
+	
+	def draw(self, deck):
+		self.hand.append(deck.drawCard())
+		return self
+
+	def showHand(self):
+		for card in self.hand:
+			card.show()
+			
+
+	def discard(self):
+		return self.hand.pop()
 
 
 
 card = Card("Clubs", 6)
-card.show()
+# card.show()
 
 deck = Deck()
-deck.show()
+# deck.show()
 deck.shuffle()
-deck.show()
+# deck.show()
+
+bob = Player("bob")
+bob.draw(deck).draw(deck)
+bob.showHand()
+
+# card = deck.draw()
+# card.show()
