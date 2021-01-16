@@ -22,9 +22,9 @@ git push -u origin main
 # Dicts => keys
 
 ```
-d = {'a' : 1, 'b' : 2, 'c' : 3 }
-for k in d:
-print k
+>>> d = {'a' : 1, 'b' : 2, 'c' : 3 }
+>>> for k in d:
+...     print k
 ... 
 a
 c
@@ -32,6 +32,7 @@ b
 ```
 
 ```
+>>> d = {'a' : 1, 'b' : 2, 'c' : 3 }
 >>> for k,v in d.iteritems():
 ...     print k, v 
 ... 
