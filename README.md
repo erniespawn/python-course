@@ -40,5 +40,17 @@ a 1
 c 3
 b 2
 ```
+# enumerate 
 
-
+```
+>>> names = ["bart", "ernie", "goofy"]
+>>> list(enumerate(names))
+[(0, 'bart'), (1, 'ernie'), (2, 'goofy')]
+>>> for num, name in enumerate(names):
+...     print num, name
+... 
+0 bart
+1 ernie
+2 goofy
+>>> 
+```
