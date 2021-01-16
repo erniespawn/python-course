@@ -1,4 +1,4 @@
-
+import random
 
 print "Nice card game to learn Class"
 
@@ -30,6 +30,10 @@ class Deck(object):
 	def show(self):
 		for c in self.cards:
 			c.show()
+
+	def shuffle(self):
+			for i in range(len(self.cards)-1, 0, -1):
+				print i
 	
 class Player(object):
 	pass
@@ -42,3 +46,4 @@ card.show()
 
 deck = Deck()
 deck.show()
+deck.shuffle()
