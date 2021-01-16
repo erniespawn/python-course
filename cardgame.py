@@ -25,7 +25,11 @@ class Deck(object):
 	def build(self):
 		for s in ["Spades", "Clubs", "Diamonds", "Hearts"]:
 				for v in range(1, 14):
-					print v, s
+					self.cards.append(Card(s, v))
+
+	def show(self):
+		for c in self.cards:
+			c.show()
 	
 class Player(object):
 	pass
@@ -37,3 +41,4 @@ card = Card("Clubs", 6)
 card.show()
 
 deck = Deck()
+deck.show()
