@@ -54,3 +54,16 @@ b 2
 2 goofy
 >>> 
 ```
+
+# zip() makes pair-wise loops
+```
+>>> names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+>>> heights = [324, 382, 442]
+>>> for name, height in zip(names, heights):
+...     print "%s: %s meters" % (name, height)
+... 
+Eiffel Tower: 324 meters
+Empire State: 382 meters
+Sears Tower: 442 meters
+>>> 
+```
