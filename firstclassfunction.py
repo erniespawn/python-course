@@ -7,4 +7,4 @@ def square(x):
 f = square
 
 print square
-print f
+print f(5)
