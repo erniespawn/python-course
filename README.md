@@ -1,6 +1,16 @@
 # python-course
 
 
+# Conversion 
+```
+https://www.youtube.com/watch?v=hCzcJdzW6Vk
+list to tuple 
+tuple to list
+
+dict to list 
+list to dict 
+```
+
 # Dicts => keys
 
 ```
