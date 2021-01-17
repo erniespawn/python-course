@@ -4,8 +4,8 @@
 def square(x):
     return x * x
 
-# def cube(x):
-#     return x * x * x
+def cube(x):
+    return x * x * x
 
 def my_map(func, arg_list): #Taken in a function as an argument and an array as argument
     result = []
@@ -13,6 +13,6 @@ def my_map(func, arg_list): #Taken in a function as an argument and an array as 
         result.append(func(i))
     return result
 
-square = my_map(square, [1, 2, 3, 4, 5])
+square = my_map(cube, [1, 2, 3, 4, 5])
 
 print square
