@@ -22,10 +22,46 @@ ernie@ernie-Server-2016:class$ python test.py
 ```
 
 
-tuple to list
 
-dict to list 
-list to dict 
+
+### dict to list & list to dict 
+
+```
+d = {'a' : 1, 'b' : 2, 'c' : 3 }
+
+print d.keys()  # dictionary keys 
+
+print list(d.keys())  # dictionary keys same as above
+
+print list(d.values())  # dictionary values
+
+
+# Convert 2 list into dictionary
+d_list = list(d.keys())
+d_values = list(d.values())
+
+print d_list, d_values
+
+d_dict2list = dict(
+    zip(
+        d_list, d_values
+    )
+)
+
+print d_dict2list
+
+ernie@ernie-Server-2016:class$ python test.py 
+['a', 'c', 'b']
+['a', 'c', 'b']
+[1, 3, 2]
+['a', 'c', 'b'] [1, 3, 2]
+{'a': 1, 'c': 3, 'b': 2}
+
+```
+
+
+
+
 ```
 
 # Dicts => keys
