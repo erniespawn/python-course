@@ -2,9 +2,21 @@
 
 
 # Conversion 
-```
+
 https://www.youtube.com/watch?v=hCzcJdzW6Vk
-list to tuple 
+### list to tuple 
+
+```
+l = ["hello", "2", "draw"]
+
+l_tuple = tuple(l)
+print l_tuple
+
+ernie@ernie-Server-2016:class$ python test.py 
+('hello', '2', 'draw')
+```
+
+
 tuple to list
 
 dict to list 
