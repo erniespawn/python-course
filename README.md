@@ -85,7 +85,7 @@ a 1
 c 3
 b 2
 ```
-# enumerate 
+# enumerate # Its used for adding index 
 
 ```
 >>> names = ["bart", "ernie", "goofy"]
