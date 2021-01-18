@@ -111,4 +111,25 @@ Eiffel Tower: 324 meters
 Empire State: 382 meters
 Sears Tower: 442 meters
 >>> 
+
+
+from collections import OrderedDict
+names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+heights = [324, 382, 442]
+
+d = OrderedDict(
+    zip(
+        names, heights
+    )
+)
+
+print d
+print dict(d)
+
+ernie@ernie-Server-2016:class$ python test.py 
+OrderedDict([('Eiffel Tower', 324), ('Empire State', 382), ('Sears Tower', 442)])
+{'Sears Tower': 442, 'Eiffel Tower': 324, 'Empire State': 382}
+
 ```
+
+
