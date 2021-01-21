@@ -2,16 +2,69 @@
 
 
 # Conversion 
-```
+
 https://www.youtube.com/watch?v=hCzcJdzW6Vk
-list to tuple 
-tuple to list
+### list to tuple & tuple to list
 
-dict to list 
-list to dict 
+```
+l = ["hello", "2", "draw"]
+
+l_tuple = tuple(l)
+print l_tuple
+
+tuple_2_list = list(l_tuple)
+print tuple_2_list
+
+ernie@ernie-Server-2016:class$ python test.py 
+('hello', '2', 'draw')
+['hello', '2', 'draw']
+
 ```
 
-# Dicts => keys
+
+
+
+### dict to list & list to dict 
+
+```
+d = {'a' : 1, 'b' : 2, 'c' : 3 }
+
+print d.keys()  # dictionary keys 
+
+print list(d.keys())  # dictionary keys same as above
+
+print list(d.values())  # dictionary values
+
+
+# Convert 2 list into dictionary
+d_list = list(d.keys())
+d_values = list(d.values())
+
+print d_list, d_values
+
+d_dict2list = dict(
+    zip(
+        d_list, d_values
+    )
+)
+
+print d_dict2list
+
+ernie@ernie-Server-2016:class$ python test.py 
+['a', 'c', 'b']
+['a', 'c', 'b']
+[1, 3, 2]
+['a', 'c', 'b'] [1, 3, 2]
+{'a': 1, 'c': 3, 'b': 2}
+
+```
+
+
+
+
+
+
+### Dicts => keys
 
 ```
 >>> d = {'a' : 1, 'b' : 2, 'c' : 3 }
@@ -32,7 +85,7 @@ a 1
 c 3
 b 2
 ```
-# enumerate 
+# enumerate # Its used for adding index 
 
 ```
 >>> names = ["bart", "ernie", "goofy"]
@@ -58,4 +111,28 @@ Eiffel Tower: 324 meters
 Empire State: 382 meters
 Sears Tower: 442 meters
 >>> 
+
 ```
+#### or 
+```
+
+from collections import OrderedDict
+names = ["Eiffel Tower", "Empire State", "Sears Tower"]
+heights = [324, 382, 442]
+
+d = OrderedDict(
+    zip(
+        names, heights
+    )
+)
+
+print d
+print dict(d)
+
+ernie@ernie-Server-2016:class$ python test.py 
+OrderedDict([('Eiffel Tower', 324), ('Empire State', 382), ('Sears Tower', 442)])
+{'Sears Tower': 442, 'Eiffel Tower': 324, 'Empire State': 382}
+
+```
+
+
